@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, Head } from '@inertiajs/inertia-react';
 
 export default function Welcome(props) {
+    useEffect(() => { console.log(props, route()) }, [])
     return (
         <>
             <Head title="Welcome" />
