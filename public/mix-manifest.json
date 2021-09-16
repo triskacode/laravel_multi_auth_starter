@@ -1,4 +1,12 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/fonts/Montserrat-Bold.ttf": "/fonts/Montserrat-Bold.ttf",
+    "/fonts/Montserrat-Light.ttf": "/fonts/Montserrat-Light.ttf",
+    "/fonts/Montserrat-Regular.ttf": "/fonts/Montserrat-Regular.ttf",
+    "/fonts/Montserrat-SemiBold.ttf": "/fonts/Montserrat-SemiBold.ttf",
+    "/fonts/OpenSans-Bold.ttf": "/fonts/OpenSans-Bold.ttf",
+    "/fonts/OpenSans-Light.ttf": "/fonts/OpenSans-Light.ttf",
+    "/fonts/OpenSans-Regular.ttf": "/fonts/OpenSans-Regular.ttf",
+    "/fonts/OpenSans-SemiBold.ttf": "/fonts/OpenSans-SemiBold.ttf"
 }

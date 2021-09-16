@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,9 +16,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory([
-            'name' => 'Triska Mahfud K',
-            'email' => 'triska.triskacode@gmail.com',
-        ])->create();
+        $this->createRoleWithUser(Role::OWNER);
+        $this->createRoleWithUser(Role::CHEF);
+        $this->createRoleWithUser(Role::CASHIER);
+        $this->createRoleWithUser(Role::WAITER);
+        $this->createRoleWithUser(Role::MEMBER);
+    }
+
+    private function createRoleWithUser(string $role)
+    {
+        return Role::factory()->state([
+            'name' => $role
+        ])
+            ->has(User::factory()
+                ->state([
+                    'name' => Str::ucfirst($role),
+                    'email' => $role . '@mail.com',
+                ]))
+            ->create();
     }
 }
